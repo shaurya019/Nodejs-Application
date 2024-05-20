@@ -1,11 +1,12 @@
 import express from "express";
+import "express-async-errors";
 import dotenv from "dotenv";
 import cors from "cors";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 import testRoutes from "./routes/testRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
-import errroMiddelware from "./middleware/errroMiddelware"
+import errroMiddelware from "./middleware/errroMiddelware";
 dotenv.config();
 const app = express();
 
