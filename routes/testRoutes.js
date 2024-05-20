@@ -1,8 +1,8 @@
 import express from "express";
-import {testPostController} from '../controllers/testController.js'
+import { testPostController } from "../controllers/testController.js";
+import userAuth from "../middleware/authMiddleware.js";
+const router = express.Router();
 
-const router = express.Router()
+router.post("/test", userAuth, testPostController);
 
-router.post('/test',testPostController)
-
-export default router
+export default router;
